@@ -39,7 +39,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             <Home>
               <Component {...pageProps} />
             </Home>
-          </RainbowKitProvider>
+          </RainbowKitProvider> 
         </QueryClientProvider>
       </WagmiProvider>
     </PostHogProvider>
