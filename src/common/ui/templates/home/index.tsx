@@ -70,7 +70,18 @@ const Home = ({ children }: { children: React.ReactNode }) => {
     {
       name: "Homebase",
       router: "/homebase",
+<<<<<<< HEAD
       icon: <HomeIcon className="h-6 w-6 shrink-0" aria-hidden="true" />,
+=======
+      icon: <NewspaperIcon className="h-6 w-6 shrink-0" aria-hidden="true" />,
+      getTitle: getFeedTitle,
+      shortcut: "Shift + F",
+    },
+    {
+      name: "Feed",
+      router: "/feed",
+      icon: <NewspaperIcon className="h-6 w-6 shrink-0" aria-hidden="true" />,
+>>>>>>> ac32542 (rebased to include Fidget Sandbox)
       getTitle: getFeedTitle,
       shortcut: "Shift + H",
     },
@@ -295,7 +306,11 @@ const Home = ({ children }: { children: React.ReactNode }) => {
             <img
               className="h-8 w-auto"
               src={logo.src}
+<<<<<<< HEAD
               alt="nounspace"
+=======
+              alt="Nounspace"
+>>>>>>> ac32542 (rebased to include Fidget Sandbox)
             />
           </div>
           <div className="h-full min-h-full flex flex-col justify-between">
@@ -349,7 +364,11 @@ const Home = ({ children }: { children: React.ReactNode }) => {
           </h1>
         </div>*/}
         <main>
+<<<<<<< HEAD
           {children}
+=======
+              
+>>>>>>> ac32542 (rebased to include Fidget Sandbox)
         </main>
       </div>
       <Toaster theme="system" position="bottom-right" />

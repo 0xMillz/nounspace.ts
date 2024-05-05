@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React, { ReactElement } from 'react';
 import _ from "lodash";
 import RGL, { WidthProvider } from "react-grid-layout";
+=======
+
+>>>>>>> ac32542 (rebased to include Fidget Sandbox)
 
 type SpaceArgs = {
   config: {
@@ -11,6 +15,7 @@ type SpaceArgs = {
     layoutConfig: {
       [key: string]: any
     }
+<<<<<<< HEAD
   };
   isEditable: boolean;
   children: ReactElement;
@@ -45,3 +50,19 @@ export default function Space({ config, isEditable, children }: SpaceArgs){
     </div>
   );
 }
+=======
+    layoutID: string;
+  };
+  isEditable: boolean;
+}
+
+const Space = ({ config, isEditable }: SpaceArgs) => {
+  return (
+    <>
+      
+    </>
+  );
+};
+
+export default Space;
+>>>>>>> ac32542 (rebased to include Fidget Sandbox)
