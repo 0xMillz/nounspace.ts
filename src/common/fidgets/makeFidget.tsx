@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { NumericRange } from "@/constants/numericRange";
-=======
->>>>>>> 6212d1a (tried async import and am running into issues with imports, attempting to make static imports work)
 import React from "react";
 
 export interface FidgetSettings {
@@ -25,7 +22,6 @@ export type FidgetFieldConfig = {
 
 export type FidgetEditConfig = {
   fields: FidgetFieldConfig[];
-<<<<<<< HEAD
   size: {
     minHeight: NumericRange<1,36>;
     maxHeight: NumericRange<1,36>;
@@ -36,24 +32,12 @@ export type FidgetEditConfig = {
       
 export interface Fidget<P> extends React.FC<P> {
   editConfig: FidgetEditConfig;
-=======
-};
-      
-export interface Fidget<P> extends React.FC<P> {
-  fieldConfig: FidgetEditConfig;
->>>>>>> 6212d1a (tried async import and am running into issues with imports, attempting to make static imports work)
 }
 
 export type GenericFidget = Fidget<FidgetSettings>;
 
-<<<<<<< HEAD
 export function makeFidget<S>(component: React.FC<S>, editConfig: FidgetEditConfig): Fidget<S> {
   const componentAny: any = component;
   componentAny.editConfig = editConfig;
-=======
-export function makeFidget<S>(component: React.FC<S>, fieldConfig: FidgetEditConfig): Fidget<S> {
-  const componentAny: any = component;
-  componentAny.fieldConfig = fieldConfig;
->>>>>>> 6212d1a (tried async import and am running into issues with imports, attempting to make static imports work)
   return componentAny;
 }
