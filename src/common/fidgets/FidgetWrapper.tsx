@@ -42,20 +42,20 @@ export function FidgetWrapper({ fidget, config, saveConfig }: FidgetWrapperProps
       {
         editing ? 
         <Button
-          className="flex items-center justify-center opacity-0 hover:opacity-100 duration-500 absolute inset-0 z-10 flex bg-slate-400 bg-opacity-50"
+          className="flex items-center justify-center absolute inset-0 z-10"
           onClick={() => setViewEditor(!viewEditor)}
         >
           { viewEditor ? "View Fidget" : "View Editor" }
         </Button> : null
       }
       { config.instanceConfig.editable ? 
-        <div className = "flex items-center justify-center opacity-0 hover:opacity-50 duration-500 absolute inset-0 z-10 flex bg-slate-400 bg-opacity-50 rounded-md">
+        <div className = "m-2 flex items-center justify-center opacity-0 hover:opacity-100 duration-500 absolute inset-0 z-10 flex bg-slate-400 bg-opacity-20 rounded-md">
           <button onClick={toggleEditing} className = "absolute flex-1 size-1/12 opacity-50 hover:opacity-100 duration-500 z-10 flex justify-center items-center text-white font-semibold text-2xl">
             <FaGear />
           </button>
         </div> : null
       }
-      <CardContent className="size-full">
+      <CardContent className="size-full overflow-hidden">
         { 
           editing && viewEditor ? 
             <FidgetWrapperEditMode
