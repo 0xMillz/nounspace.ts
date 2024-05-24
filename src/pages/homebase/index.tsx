@@ -1,7 +1,7 @@
 import React from "react";
 import Space, { SpaceConfig } from "@/common/ui/templates/Space";
+import Toolbar from "@/common/ui/molecules/Toolbar";
 import { useState } from "react";
-import { RiPencilFill } from "react-icons/ri";
 import {
   GridLayout,
   ResizeDirections,
@@ -71,10 +71,6 @@ export default function Homebase() {
     },
   };
 
-  function switchMode() {
-    setMode(!editMode);
-  }
-
   const gridDetails: GridLayout = {
     isDraggable: false,
     isResizable: false,
@@ -107,6 +103,10 @@ export default function Homebase() {
     return true;
   }
 
+  const switchMode = () => {
+    setMode(!editMode);
+  }
+
   return (
     <div>
       <div
@@ -116,22 +116,7 @@ export default function Homebase() {
             : "no-edit-grid  absolute inset-0 z-0"
         }
       />
-      <button
-        onClick={switchMode}
-        className={
-          editMode
-            ? "opacity-90 rounded-full bg-white size-12 absolute top-6 right-4 z-10 flex hover:opacity-100 duration-500"
-            : "opacity-50 rounded-full bg-white size-12 absolute top-6 right-4 z-10 flex hover:opacity-100 duration-500"
-        }
-      >
-        <RiPencilFill
-          className={
-            editMode
-              ? "text-slate-900 font-semibold text-2xl absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              : "text-gray-700 font-semibold text-2xl absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          }
-        />
-      </button>
+      <Toolbar editMode={editMode} switchMode={switchMode}/>
       <Space
         config={spaceConfig}
         isEditable={editMode}

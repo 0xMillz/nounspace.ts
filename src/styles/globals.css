@@ -60,6 +60,43 @@
     @apply bg-background text-foreground;
   }
 } */
+
+/* Toolbar Styling */
+.toolbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: 28px;
+  right: 50px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+  width: 0;
+  white-space: nowrap;
+}
+
+.toolbar.open {
+  width: 200px;
+  background-color: white;
+  z-index: 1;
+}
+
+.toolbar-item {
+  background-color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  border-left: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+.toolbar-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Grid Styling */
+
 .no-edit-grid {
   /* background-image: radial-gradient(circle, #000000 1px, rgba(0, 0, 0, 0) 1px); */
 
